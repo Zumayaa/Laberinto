@@ -15,8 +15,8 @@ import javax.swing.JComponent;
 import java.awt.Color;
 
 public class Ventana extends JFrame {
-	public int super_x = 230;
-	public int super_y = 160;
+	public int super_x = 20;
+	public int super_y = 10;
 	private JPanel contentPane;
 
 	/**
@@ -69,17 +69,17 @@ public class Ventana extends JFrame {
 				// TODO Auto-generated method stub
 				System.out.println(e.getKeyCode());
 				
-				if(e.getKeyCode() == 38 && super_y>0) {
-					super_y -= 10;
+				if((e.getKeyCode() == 87 || e.getKeyCode() == 38) && super_y>0) {
+					super_y -= 2;
 				}
-				if(e.getKeyCode() == 40 && super_y <360) {
-					super_y += 10;
+				if((e.getKeyCode() == 83 || e.getKeyCode() == 40) && super_y <420) {
+					super_y += 2;
 				}
-				if(e.getKeyCode() == 37 && super_x > 0) {
-					super_x -= 10;
+				if((e.getKeyCode() == 65 || e.getKeyCode() == 37) && super_x > 0) {
+					super_x -= 2;
 				}
-				if(e.getKeyCode() == 39 && super_x < 460) {
-					super_x += 10;
+				if((e.getKeyCode() == 68 || e.getKeyCode() == 39) && super_x < 490) {
+					super_x += 2;
 				}
 				juego.repaint();
 			}
@@ -99,21 +99,23 @@ public class Ventana extends JFrame {
 		private static final long serialVersionUID = 1L;
 		
 		MyGraphics(){
-			setPreferredSize(new Dimension(500,400));
+			setPreferredSize(new Dimension(500,500));
 		}
 		public void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			
 			
-			Rect r = new Rect(super_x,super_y,40,40, new Color(0,0,0));
-			g.setColor(r.c);
-			g.fillRect(r.x, r.y, r.w, r.h);
+			Rect player = new Rect(super_x,super_y,10,10, new Color(0,0,0));
+			g.setColor(player.c);
+			g.fillRect(player.x, player.y, player.w, player.h);
 			
-			Rect p = new Rect(300, 60,40,200,Color.decode("#A1FF94"));
-			g.setColor(p.c);
-			g.fillRect(p.x, p.y, p.w, p.h);
+			Rect pared = new Rect(300, 60,40,200,Color.decode("#A1FF94"));
+			g.setColor(pared.c);
+			g.fillRect(pared.x, pared.y, pared.w, pared.h);
 			
-			System.out.println(r.colision(p));
+			System.out.println(player.colision(pared));
+			
+			
 		}
 	}
 	
