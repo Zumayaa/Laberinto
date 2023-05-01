@@ -3,6 +3,7 @@ import java.awt.Dimension;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
@@ -52,6 +53,11 @@ public class Ventana extends JFrame {
 		
 		JButton btnNewButton = new JButton("Reiniciar");
 		panel.add(btnNewButton);
+		
+		JLabel timer = new JLabel ("00:00:00");
+		panel.add(timer);
+		Cronometro.iniciar(timer);
+		
 		
 		JPanel juego = new JPanel();
 		juego.setBackground(Color.black);
