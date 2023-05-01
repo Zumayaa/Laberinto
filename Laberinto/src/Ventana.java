@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
@@ -13,6 +14,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.management.timer.Timer;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import java.awt.Color;
@@ -20,6 +22,7 @@ import java.awt.Color;
 public class Ventana extends JFrame {
 	public int super_x = 2;
 	public int super_y = 2;
+	private JLabel timer;
 	private JPanel contentPane;
 
 	/**
@@ -53,7 +56,7 @@ public class Ventana extends JFrame {
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.SOUTH);
 		
-		JLabel timer = new JLabel ("00:00:00");
+		timer = new JLabel ("00:00:00");
 		panel.add(timer);
 		Cronometro.iniciar(timer);
 		
@@ -317,9 +320,95 @@ public class Ventana extends JFrame {
 			g.setColor(pared44.c);
 			g.fillRect(pared44.x, pared44.y, pared44.w, pared44.h);
 			
-			Rect pared45 = new Rect(230, 290, 3, 30, Color.decode("#FF0000"));
+			Rect pared45 = new Rect(230, 290, 3, 30, Color.decode("#00ffff"));
 			g.setColor(pared45.c);
 			g.fillRect(pared45.x, pared45.y, pared45.w, pared45.h);
+			
+			Rect pared46 = new Rect(203, 280, 30, 3, Color.decode("#00ffff"));
+			g.setColor(pared46.c);
+			g.fillRect(pared46.x, pared46.y, pared46.w, pared46.h);
+			
+			Rect pared47 = new Rect(170, 220, 3, 80, Color.decode("#00ffff"));
+			g.setColor(pared47.c);
+			g.fillRect(pared47.x, pared47.y, pared47.w, pared47.h);
+			
+			Rect pared48 = new Rect(200, 220, 60, 3, Color.decode("#00ffff"));
+			g.setColor(pared48.c);
+			g.fillRect(pared48.x, pared48.y, pared48.w, pared48.h);
+			
+			Rect pared49 = new Rect(320, 220, 60, 3, Color.decode("#00ffff"));
+			g.setColor(pared49.c);
+			g.fillRect(pared49.x, pared49.y, pared49.w, pared49.h);
+			
+			Rect pared50 = new Rect(330, 300, 60, 3, Color.decode("#00ffff"));
+			g.setColor(pared50.c);
+			g.fillRect(pared50.x, pared50.y, pared50.w, pared50.h);
+			
+			Rect pared51 = new Rect(320, 270, 180, 3, Color.decode("#00ffff"));
+			g.setColor(pared51.c);
+			g.fillRect(pared51.x, pared51.y, pared51.w, pared51.h);
+			
+			Rect pared52 = new Rect(390, 330, 110, 3, Color.decode("#00ffff"));
+			g.setColor(pared52.c);
+			g.fillRect(pared52.x, pared52.y, pared52.w, pared52.h);
+			
+			Rect pared53 = new Rect(360, 360, 110, 3, Color.decode("#00ffff"));
+			g.setColor(pared53.c);
+			g.fillRect(pared53.x, pared53.y, pared53.w, pared53.h);
+			
+			Rect pared54 = new Rect(450, 290, 3, 40, Color.decode("#00ffff"));
+			g.setColor(pared54.c);
+			g.fillRect(pared54.x, pared54.y, pared54.w, pared54.h);
+			
+			Rect pared55 = new Rect(420, 290, 3, 40, Color.decode("#00ffff"));
+			g.setColor(pared55.c);
+			g.fillRect(pared55.x, pared55.y, pared55.w, pared55.h);
+			
+			Rect pared56 = new Rect(480, 270, 3, 40, Color.decode("#00ffff"));
+			g.setColor(pared56.c);
+			g.fillRect(pared56.x, pared56.y, pared56.w, pared56.h);
+			
+			Rect pared57 = new Rect(360, 390, 110, 3, Color.decode("#00ffff"));
+			g.setColor(pared57.c);
+			g.fillRect(pared57.x, pared57.y, pared57.w, pared57.h);
+			
+			Rect pared58 = new Rect(390, 410, 110, 3, Color.decode("#00ffff"));
+			g.setColor(pared58.c);
+			g.fillRect(pared58.x, pared58.y, pared58.w, pared58.h);
+			
+			Rect pared59 = new Rect(260, 220, 3, 40, Color.decode("#00ffff"));
+			g.setColor(pared59.c);
+			g.fillRect(pared59.x, pared59.y, pared59.w, pared59.h);
+			
+			Rect pared60 = new Rect(290, 220, 3, 60, Color.decode("#00ffff"));
+			g.setColor(pared60.c);
+			g.fillRect(pared60.x, pared60.y, pared60.w, pared60.h);
+			
+			Rect pared61 = new Rect(200, 250, 30, 3, Color.decode("#00ffff"));
+			g.setColor(pared61.c);
+			g.fillRect(pared61.x, pared61.y, pared61.w, pared61.h);
+			
+			Rect ganar = new Rect(490, 0, 10, 10, Color.decode("#23c423"));
+			g.setColor(ganar.c);
+			g.fillRect(ganar.x, ganar.y, ganar.w, ganar.h);
+			
+			if(player.colision(ganar)) {
+				super_x = 2;
+				super_y = 2;
+				
+				String tiempo = "";
+				tiempo = timer.getText();
+				
+				
+				JOptionPane.showMessageDialog(null, "Tu tiempo fue: " + tiempo,"FELICIDADES!",JOptionPane.INFORMATION_MESSAGE);
+				
+				Cronometro.reiniciar(timer);
+				Cronometro.iniciar(timer);
+				
+				repaint();
+				revalidate();
+				
+			}
 			
 			System.out.println(player.colision(pared));
 			
