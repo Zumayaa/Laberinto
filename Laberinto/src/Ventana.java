@@ -427,7 +427,6 @@ public class Ventana extends JFrame {
 			g.setColor(pared71.c);
 			g.fillRect(pared71.x, pared71.y, pared71.w, pared71.h);
 			
-			//#FF0000
 			Rect pared72 = new Rect(350, 105, 150, 03, Color.decode("#00ffff"));
 			g.setColor(pared72.c);
 			g.fillRect(pared72.x, pared72.y, pared72.w, pared72.h);
@@ -484,6 +483,131 @@ public class Ventana extends JFrame {
 			g.setColor(pared85.c);
 			g.fillRect(pared85.x, pared85.y, pared85.w, pared85.h);
 			
+			Rect pared86 = new Rect(350, 105, 03, 50, Color.decode("#00ffff"));
+			g.setColor(pared86.c);
+			g.fillRect(pared86.x, pared86.y, pared86.w, pared86.h);
+			
+			Rect pared87 = new Rect(350, 155, 120, 03, Color.decode("#00ffff"));
+			g.setColor(pared87.c);
+			g.fillRect(pared87.x, pared87.y, pared87.w, pared87.h);
+			
+			Rect pared88 = new Rect(350, 200, 03, 50, Color.decode("#00ffff"));
+			g.setColor(pared88.c);
+			g.fillRect(pared88.x, pared88.y, pared88.w, pared88.h);
+			
+			Rect pared89 = new Rect(370, 200, 03, 50, Color.decode("#00ffff"));
+			g.setColor(pared89.c);
+			g.fillRect(pared89.x, pared89.y, pared89.w, pared89.h);
+			
+			Rect pared90 = new Rect(380, 180, 120, 03, Color.decode("#00ffff"));
+			g.setColor(pared90.c);
+			g.fillRect(pared90.x, pared90.y, pared90.w, pared90.h);
+			
+			Rect pared91 = new Rect(400, 220, 100, 03, Color.decode("#00ffff"));
+			g.setColor(pared91.c);
+			g.fillRect(pared91.x, pared91.y, pared91.w, pared91.h);
+			
+			Rect pared92 = new Rect(420, 195, 03, 60, Color.decode("#00ffff"));
+			g.setColor(pared92.c);
+			g.fillRect(pared92.x, pared92.y, pared92.w, pared92.h);
+			
+			Rect pared93 = new Rect(440, 195, 03, 60, Color.decode("#00ffff"));
+			g.setColor(pared93.c);
+			g.fillRect(pared93.x, pared93.y, pared93.w, pared93.h);
+			
+			Rect pared94 = new Rect(455, 195, 03, 60, Color.decode("#00ffff"));
+			g.setColor(pared94.c);
+			g.fillRect(pared94.x, pared94.y, pared94.w, pared94.h);
+			
+			Rect pared95 = new Rect(473, 195, 03, 60, Color.decode("#00ffff"));
+			g.setColor(pared95.c);
+			g.fillRect(pared95.x, pared95.y, pared95.w, pared95.h);
+			
+			Rect pared96 = new Rect(490, 195, 03, 60, Color.decode("#00ffff"));
+			g.setColor(pared96.c);
+			g.fillRect(pared96.x, pared96.y, pared96.w, pared96.h);
+			
+			Rect pared97 = new Rect(390, 240, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared97.c);
+			g.fillRect(pared97.x, pared97.y, pared97.w, pared97.h);
+			
+			Rect pared98 = new Rect(370, 105, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared98.c);
+			g.fillRect(pared98.x, pared98.y, pared98.w, pared98.h);
+			
+			Rect pared99 = new Rect(390, 125, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared99.c);
+			g.fillRect(pared99.x, pared99.y, pared99.w, pared99.h);
+			
+			Rect pared100 = new Rect(410, 125, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared100.c);
+			g.fillRect(pared100.x, pared100.y, pared100.w, pared100.h);
+			
+			Rect pared101 = new Rect(430, 105, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared101.c);
+			g.fillRect(pared101.x, pared101.y, pared101.w, pared101.h);
+			
+			Rect pared102 = new Rect(450, 105, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared102.c);
+			g.fillRect(pared102.x, pared102.y, pared102.w, pared102.h);
+			
+			Rect pared103 = new Rect(467, 125, 03, 30, Color.decode("#00ffff"));
+			g.setColor(pared103.c);
+			g.fillRect(pared103.x, pared103.y, pared103.w, pared103.h);
+			
+			Rect pared104 = new Rect(330, 32, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared104.c);
+			g.fillRect(pared104.x, pared104.y, pared104.w, pared104.h);
+			
+			Rect pared105 = new Rect(350, 32, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared105.c);
+			g.fillRect(pared105.x, pared105.y, pared105.w, pared105.h);
+			
+			Rect pared106 = new Rect(380, 32, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared106.c);
+			g.fillRect(pared106.x, pared106.y, pared106.w, pared106.h);
+			
+			Rect pared107 = new Rect(420, 32, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared107.c);
+			g.fillRect(pared107.x, pared107.y, pared107.w, pared107.h);
+			
+			Rect pared108 = new Rect(200, 400, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared108.c);
+			g.fillRect(pared108.x, pared108.y, pared108.w, pared108.h);
+			
+			Rect pared109 = new Rect(170, 390, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared109.c);
+			g.fillRect(pared109.x, pared109.y, pared109.w, pared109.h);
+			
+			Rect pared110 = new Rect(140, 370, 03, 40, Color.decode("#00ffff"));
+			g.setColor(pared110.c);
+			g.fillRect(pared110.x, pared110.y, pared110.w, pared110.h);
+			
+			Rect pared111 = new Rect(160, 370, 03, 20, Color.decode("#00ffff"));
+			g.setColor(pared111.c);
+			g.fillRect(pared111.x, pared111.y, pared111.w, pared111.h);
+			
+			Rect pared112 = new Rect(155, 425, 03, 15, Color.decode("#00ffff"));
+			g.setColor(pared112.c);
+			g.fillRect(pared112.x, pared112.y, pared112.w, pared112.h);
+			
+			Rect pared113 = new Rect(20, 355, 15, 03, Color.decode("#00ffff"));
+			g.setColor(pared113.c);
+			g.fillRect(pared113.x, pared113.y, pared113.w, pared113.h);
+			
+			Rect pared114 = new Rect(20, 270, 15, 03, Color.decode("#00ffff"));
+			g.setColor(pared114.c);
+			g.fillRect(pared114.x, pared114.y, pared114.w, pared114.h);
+			
+			Rect pared115 = new Rect(40, 220, 10, 03, Color.decode("#00ffff"));
+			g.setColor(pared115.c);
+			g.fillRect(pared115.x, pared115.y, pared115.w, pared115.h);
+			
+			Rect pared116 = new Rect(40, 190, 10, 03, Color.decode("#00ffff"));
+			g.setColor(pared116.c);
+			g.fillRect(pared116.x, pared116.y, pared116.w, pared116.h);
+			
+			//#FF0000
 			Rect ganar = new Rect(490, 0, 10, 10, Color.decode("#23c423"));
 			g.setColor(ganar.c);
 			g.fillRect(ganar.x, ganar.y, ganar.w, ganar.h);
