@@ -109,6 +109,7 @@ public class Ventana extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				Cronometro.reiniciar(timer);
+				Cronometro.iniciar(timer);
 				
 				super_x = 2;
 				super_y = 2;
