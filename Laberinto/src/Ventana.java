@@ -284,7 +284,7 @@ public class Ventana extends JFrame {
 			g.setColor(pared36.c);
 			g.fillRect(pared36.x, pared36.y, pared36.w, pared36.h);
 			
-			Rect pared37 = new Rect(300, 300, 3, 120, Color.decode("#00ffff"));
+			Rect pared37 = new Rect(300, 300, 3, 140, Color.decode("#00ffff"));
 			g.setColor(pared37.c);
 			g.fillRect(pared37.x, pared37.y, pared37.w, pared37.h);
 			
@@ -296,6 +296,30 @@ public class Ventana extends JFrame {
 			g.setColor(pared39.c);
 			g.fillRect(pared39.x, pared39.y, pared39.w, pared39.h);
 	
+			Rect pared40 = new Rect(110, 320, 90, 3, Color.decode("#00ffff"));
+			g.setColor(pared40.c);
+			g.fillRect(pared40.x, pared40.y, pared40.w, pared40.h);
+			
+			//#FF0000
+			Rect pared41 = new Rect(110, 390, 63, 3, Color.decode("#00ffff"));
+			g.setColor(pared41.c);
+			g.fillRect(pared41.x, pared41.y, pared41.w, pared41.h);
+			
+			Rect pared42 = new Rect(200, 280, 3, 100, Color.decode("#00ffff"));
+			g.setColor(pared42.c);
+			g.fillRect(pared42.x, pared42.y, pared42.w, pared42.h);
+			
+			Rect pared43 = new Rect(260, 290, 3, 80, Color.decode("#00ffff"));
+			g.setColor(pared43.c);
+			g.fillRect(pared43.x, pared43.y, pared43.w, pared43.h);
+			
+			Rect pared44 = new Rect(200, 370, 63, 3, Color.decode("#00ffff"));
+			g.setColor(pared44.c);
+			g.fillRect(pared44.x, pared44.y, pared44.w, pared44.h);
+			
+			Rect pared45 = new Rect(230, 290, 3, 30, Color.decode("#FF0000"));
+			g.setColor(pared45.c);
+			g.fillRect(pared45.x, pared45.y, pared45.w, pared45.h);
 			
 			System.out.println(player.colision(pared));
 			
