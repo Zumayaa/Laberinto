@@ -8,6 +8,8 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.FlowLayout;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -51,12 +53,11 @@ public class Ventana extends JFrame {
 		JPanel panel = new JPanel();
 		contentPane.add(panel, BorderLayout.SOUTH);
 		
-		JButton btnNewButton = new JButton("Reiniciar");
-		panel.add(btnNewButton);
-		
 		JLabel timer = new JLabel ("00:00:00");
 		panel.add(timer);
 		Cronometro.iniciar(timer);
+		
+		
 		
 		
 		JPanel juego = new JPanel();
@@ -99,6 +100,26 @@ public class Ventana extends JFrame {
 		});
 		juego.setFocusable(true);
 		juego.requestFocus();
+		
+		JButton reinicio = new JButton("Reiniciar");
+		panel.add(reinicio);
+		
+		reinicio.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Cronometro.reiniciar(timer);
+				
+				super_x = 2;
+				super_y = 2;
+				
+				repaint();
+				revalidate();
+				juego.setFocusable(true);
+				juego.requestFocus();
+			}
+			
+		});
 	}
 	
 	public class MyGraphics extends JComponent{
