@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 import javax.management.timer.Timer;
 import javax.swing.JButton;
@@ -22,8 +23,11 @@ import java.awt.Color;
 public class Ventana extends JFrame {
 	public int super_x = 2;
 	public int super_y = 2;
+	public int actualX;
 	private JLabel timer;
 	private JPanel contentPane;
+	ArrayList<Rect> paredes = new ArrayList<Rect>();
+	
 
 	/**
 	 * Launch the application.
@@ -607,10 +611,140 @@ public class Ventana extends JFrame {
 			g.setColor(pared116.c);
 			g.fillRect(pared116.x, pared116.y, pared116.w, pared116.h);
 			
+			Boolean lleno = true;
+			
+			if(lleno) {
+				paredes.add(pared);
+				paredes.add(pared2);
+				paredes.add(pared3);
+				paredes.add(pared4);
+				paredes.add(pared5);
+				paredes.add(pared6);
+				paredes.add(pared7);
+				paredes.add(pared8);
+				paredes.add(pared9);
+				paredes.add(pared10);
+				paredes.add(pared11);
+				paredes.add(pared12);
+				paredes.add(pared13);
+				paredes.add(pared14);
+				paredes.add(pared15);
+				paredes.add(pared16);
+				paredes.add(pared17);
+				paredes.add(pared18);
+				paredes.add(pared19);
+				paredes.add(pared20);
+				paredes.add(pared21);
+				paredes.add(pared22);
+				paredes.add(pared23);
+				paredes.add(pared24);
+				paredes.add(pared25);
+				paredes.add(pared26);
+				paredes.add(pared27);
+				paredes.add(pared28);
+				paredes.add(pared29);
+				paredes.add(pared30);
+				paredes.add(pared31);
+				paredes.add(pared32);
+				paredes.add(pared33);
+				paredes.add(pared34);
+				paredes.add(pared35);
+				paredes.add(pared36);
+				paredes.add(pared37);
+				paredes.add(pared38);
+				paredes.add(pared39);
+				paredes.add(pared40);
+				paredes.add(pared41);
+				paredes.add(pared42);
+				paredes.add(pared43);
+				paredes.add(pared44);
+				paredes.add(pared45);
+				paredes.add(pared46);
+				paredes.add(pared47);
+				paredes.add(pared48);
+				paredes.add(pared49);
+				paredes.add(pared50);
+				paredes.add(pared51);
+				paredes.add(pared52);
+				paredes.add(pared53);
+				paredes.add(pared54);
+				paredes.add(pared55);
+				paredes.add(pared56);
+				paredes.add(pared57);
+				paredes.add(pared58);
+				paredes.add(pared59);
+				paredes.add(pared60);
+				paredes.add(pared61);
+				paredes.add(pared62);
+				paredes.add(pared63);
+				paredes.add(pared64);
+				paredes.add(pared65);
+				paredes.add(pared66);
+				paredes.add(pared67);
+				paredes.add(pared68);
+				paredes.add(pared69);
+				paredes.add(pared70);
+				paredes.add(pared71);
+				paredes.add(pared72);
+				paredes.add(pared73);
+				paredes.add(pared74);
+				paredes.add(pared75);
+				paredes.add(pared76);
+				paredes.add(pared77);
+				paredes.add(pared78);
+				paredes.add(pared79);
+				paredes.add(pared80);
+			    paredes.add(pared81);
+			    paredes.add(pared82);
+			    paredes.add(pared83);
+			    paredes.add(pared84);
+			    paredes.add(pared85);
+			    paredes.add(pared86);
+			    paredes.add(pared87);
+			    paredes.add(pared88);
+			    paredes.add(pared89);
+			    paredes.add(pared90);
+			    paredes.add(pared91);
+			    paredes.add(pared92);
+			    paredes.add(pared93);
+				paredes.add(pared94);
+				paredes.add(pared95);
+				paredes.add(pared96);
+				paredes.add(pared97);
+				paredes.add(pared98);
+				paredes.add(pared99);
+				paredes.add(pared100);
+				paredes.add(pared101);
+			    paredes.add(pared102);
+			    paredes.add(pared103);
+			    paredes.add(pared104);
+			    paredes.add(pared105);
+			    paredes.add(pared106);
+			    paredes.add(pared107);
+			    paredes.add(pared108);
+			    paredes.add(pared109);
+			    paredes.add(pared110);
+			    paredes.add(pared111);
+			    paredes.add(pared112);
+			    paredes.add(pared113);
+			    paredes.add(pared114);
+			    paredes.add(pared115);
+			    paredes.add(pared116);
+			    
+			    lleno = false;
+			}
+			
+			for(int i = 0; i< paredes.size();i++) {
+				if(player.colision(paredes.get(i))) {
+					
+				}
+			}
+			
 			//#FF0000
 			Rect ganar = new Rect(490, 0, 10, 10, Color.decode("#23c423"));
 			g.setColor(ganar.c);
 			g.fillRect(ganar.x, ganar.y, ganar.w, ganar.h);
+			
 			
 			if(player.colision(ganar)) {
 				super_x = 2;
@@ -632,9 +766,6 @@ public class Ventana extends JFrame {
 			
 			System.out.println(player.colision(pared));
 			
-			if(player.colision(pared)) {
-				super_x -= 2;
-			}
 			
 		}
 	}
