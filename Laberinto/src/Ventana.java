@@ -23,7 +23,8 @@ import java.awt.Color;
 public class Ventana extends JFrame {
 	public int super_x = 2;
 	public int super_y = 2;
-	public int actualX;
+	public int tecla = 0;
+	private Boolean lleno = true;
 	private JLabel timer;
 	private JPanel contentPane;
 	ArrayList<Rect> paredes = new ArrayList<Rect>();
@@ -37,6 +38,7 @@ public class Ventana extends JFrame {
 			public void run() {
 				try {
 					Ventana frame = new Ventana();
+					frame.setLocationRelativeTo(null);
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -50,6 +52,7 @@ public class Ventana extends JFrame {
 	 */
 	public Ventana() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setBounds(100, 100, 540, 540);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -85,15 +88,19 @@ public class Ventana extends JFrame {
 				
 				if((e.getKeyCode() == 87 || e.getKeyCode() == 38) && super_y>0) {
 					super_y -= 2;
+					tecla = e.getKeyCode();
 				}
 				if((e.getKeyCode() == 83 || e.getKeyCode() == 40) && super_y <430) {
 					super_y += 2;
+					tecla = e.getKeyCode();
 				}
 				if((e.getKeyCode() == 65 || e.getKeyCode() == 37) && super_x > 0) {
 					super_x -= 2;
+					tecla = e.getKeyCode();
 				}
 				if((e.getKeyCode() == 68 || e.getKeyCode() == 39) && super_x < 490) {
 					super_x += 2;
+					tecla = e.getKeyCode();
 				}
 				juego.repaint();
 			}
@@ -611,7 +618,7 @@ public class Ventana extends JFrame {
 			g.setColor(pared116.c);
 			g.fillRect(pared116.x, pared116.y, pared116.w, pared116.h);
 			
-			Boolean lleno = true;
+			
 			
 			if(lleno) {
 				paredes.add(pared);
@@ -736,7 +743,18 @@ public class Ventana extends JFrame {
 			
 			for(int i = 0; i< paredes.size();i++) {
 				if(player.colision(paredes.get(i))) {
-					
+					if((tecla == 87 || tecla == 38)) {
+						super_y += 2;	
+					}
+					if((tecla == 83 || tecla == 40)) {
+						super_y -= 2;
+					}
+					if((tecla == 65 || tecla == 37)) {
+						super_x += 2;
+					}
+					if((tecla == 68 || tecla == 39)) {
+						super_x -= 2;
+					}
 				}
 			}
 			
